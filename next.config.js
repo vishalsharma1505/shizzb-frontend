@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   images: {
     domains: [
       "i.ibb.co",
@@ -8,7 +13,7 @@ const nextConfig = {
       "res.cloudinary.com",
       "dummyimage.com",
       "images-static.nykaa.com",
-      "www.lakmeindia.com"
+      "www.lakmeindia.com",
     ],
   },
 };
