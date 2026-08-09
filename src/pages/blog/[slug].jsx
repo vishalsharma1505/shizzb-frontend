@@ -67,7 +67,7 @@ export default BlogDetailsPage;
 export const getServerSideProps = async ({ params }) => {
   try {
     const res = await fetch(
-      `http://localhost:7000/api/blog/navigation/${params.slug}`
+      `https://shizzb-backend.onrender.com/api/blog/navigation/${params.slug}`
     );
 
     const result = await res.json();

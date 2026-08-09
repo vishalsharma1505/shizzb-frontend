@@ -11,7 +11,7 @@ export const categoryApi = apiSlice.injectEndpoints({
 
     addCategory: builder.mutation({
       query: (data) => ({
-        url: "http://localhost:7000/api/category/add",
+        url: "https://shizzb-backend.onrender.com/api/category/add",
         method: "POST",
         body: data,
       }),
@@ -23,7 +23,7 @@ export const categoryApi = apiSlice.injectEndpoints({
 
     getShowCategory: builder.query({
       query: () =>
-        "http://localhost:7000/api/category/show",
+        "https://shizzb-backend.onrender.com/api/category/show",
     }),
 
     // ==========================
@@ -32,7 +32,7 @@ export const categoryApi = apiSlice.injectEndpoints({
 
     getProductTypeCategory: builder.query({
       query: (type) =>
-        `http://localhost:7000/api/category/show/${type}`,
+        `https://shizzb-backend.onrender.com/api/category/show/${type}`,
     }),
 
     // ==========================
@@ -41,7 +41,7 @@ export const categoryApi = apiSlice.injectEndpoints({
 
     getHomeCategories: builder.query({
       query: () =>
-        "http://localhost:7000/api/category/home",
+        "https://shizzb-backend.onrender.com/api/category/home",
     }),
 
   }),

@@ -16,7 +16,7 @@ const BlogPostboxArea = () => {
   const [countOfPage, setCountOfPage] = useState(4);
 
   useEffect(() => {
-    fetch("http://localhost:7000/api/blog")
+    fetch("https://shizzb-backend.onrender.com/api/blog")
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {

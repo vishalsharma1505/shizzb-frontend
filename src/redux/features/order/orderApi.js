@@ -13,7 +13,7 @@ export const authApi = apiSlice.injectEndpoints({
 
       query: (data) => ({
 
-        url: "http://localhost:7000/api/payment/create-order",
+        url: "https://shizzb-backend.onrender.com/api/payment/create-order",
 
         method: "POST",
 
@@ -31,7 +31,7 @@ export const authApi = apiSlice.injectEndpoints({
 
       query: (data) => ({
 
-        url: "http://localhost:7000/api/order/saveOrder",
+        url: "https://shizzb-backend.onrender.com/api/order/saveOrder",
 
         method: "POST",
 
@@ -70,7 +70,7 @@ export const authApi = apiSlice.injectEndpoints({
     getUserOrders: builder.query({
 
       query: () =>
-        "http://localhost:7000/api/user-order",
+        "https://shizzb-backend.onrender.com/api/user-order",
 
       providesTags: ["UserOrders"],
 
@@ -85,7 +85,7 @@ export const authApi = apiSlice.injectEndpoints({
     getUserOrderById: builder.query({
 
       query: (id) =>
-        `http://localhost:7000/api/user-order/${id}`,
+        `https://shizzb-backend.onrender.com/api/user-order/${id}`,
 
       providesTags: (result, error, arg) => [
 

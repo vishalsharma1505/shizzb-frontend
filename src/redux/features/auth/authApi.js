@@ -7,7 +7,7 @@ export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     registerUser: builder.mutation({
       query: (data) => ({
-        url: "http://localhost:7000/api/user/signup",
+        url: "https://shizzb-backend.onrender.com/api/user/signup",
         method: "POST",
         body: data,
       }),
@@ -15,7 +15,7 @@ export const authApi = apiSlice.injectEndpoints({
     // signUpProvider
     signUpProvider: builder.mutation({
       query: (token) => ({
-        url: `http://localhost:7000/api/user/register/${token}`,
+        url: `https://shizzb-backend.onrender.com/api/user/register/${token}`,
         method: "POST",
       }),
 
@@ -46,7 +46,7 @@ export const authApi = apiSlice.injectEndpoints({
     // login
     loginUser: builder.mutation({
       query: (data) => ({
-        url: "http://localhost:7000/api/user/login",
+        url: "https://shizzb-backend.onrender.com/api/user/login",
         method: "POST",
         body: data,
       }),
@@ -77,7 +77,7 @@ export const authApi = apiSlice.injectEndpoints({
     }),
     // get me
     getUser: builder.query({
-      query: () => "http://localhost:7000/api/user/me",
+      query: () => "https://shizzb-backend.onrender.com/api/user/me",
 
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
@@ -94,7 +94,7 @@ export const authApi = apiSlice.injectEndpoints({
     }),
     // confirmEmail
     confirmEmail: builder.query({
-      query: (token) => `http://localhost:7000/api/user/confirmEmail/${token}`,
+      query: (token) => `https://shizzb-backend.onrender.com/api/user/confirmEmail/${token}`,
 
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
   try {
@@ -130,7 +130,7 @@ export const authApi = apiSlice.injectEndpoints({
     // reset password
     resetPassword: builder.mutation({
       query: (data) => ({
-        url: "http://localhost:7000/api/user/forget-password",
+        url: "https://shizzb-backend.onrender.com/api/user/forget-password",
         method: "PATCH",
         body: data,
       }),
@@ -138,7 +138,7 @@ export const authApi = apiSlice.injectEndpoints({
     // confirmForgotPassword
     confirmForgotPassword: builder.mutation({
       query: (data) => ({
-        url: "http://localhost:7000/api/user/confirm-forget-password",
+        url: "https://shizzb-backend.onrender.com/api/user/confirm-forget-password",
         method: "PATCH",
         body: data,
       }),
@@ -146,7 +146,7 @@ export const authApi = apiSlice.injectEndpoints({
     // change password
     changePassword: builder.mutation({
       query: (data) => ({
-        url: "http://localhost:7000/api/user/change-password",
+        url: "https://shizzb-backend.onrender.com/api/user/change-password",
         method: "PATCH",
         body: data,
       }),
@@ -154,7 +154,7 @@ export const authApi = apiSlice.injectEndpoints({
     // updateProfile password
     updateProfile: builder.mutation({
       query: ({ id, ...data }) => ({
-        url: `http://localhost:7000/api/user/update-user/${id}`,
+        url: `https://shizzb-backend.onrender.com/api/user/update-user/${id}`,
         method: "PUT",
         body: data,
       }),

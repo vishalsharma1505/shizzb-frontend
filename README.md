@@ -103,7 +103,7 @@ To get started with Shofy, follow these steps:
 
 ## Server Side Live Link
 
-[Shofy Server Side Live Link](http://localhost:7000)
+[Shofy Server Side Live Link](https://shizzb-backend.onrender.com)
 
 ## Client Side Repo
 

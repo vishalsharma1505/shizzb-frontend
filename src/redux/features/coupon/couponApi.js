@@ -5,7 +5,7 @@ export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     // get offer coupon
     getOfferCoupons: builder.query({
-      query: () => `http://localhost:7000/api/coupon/all`,
+      query: () => `https://shizzb-backend.onrender.com/api/coupon/all`,
       providesTags:['Coupon'],
       keepUnusedDataFor: 600,
     }),

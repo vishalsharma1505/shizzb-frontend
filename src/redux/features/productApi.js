@@ -4,23 +4,23 @@ export const productApi = apiSlice.injectEndpoints({
   overrideExisting: true,
   endpoints: (builder) => ({
     getAllProducts: builder.query({
-      query: () => `http://localhost:7000/api/product/all`,
+      query: () => `https://shizzb-backend.onrender.com/api/product/all`,
       providesTags:['Products']
     }),
     getProductType: builder.query({
-      query: ({ type, query }) => `http://localhost:7000/api/product/${type}?${query}`,
+      query: ({ type, query }) => `https://shizzb-backend.onrender.com/api/product/${type}?${query}`,
       providesTags:['ProductType']
     }),
     getOfferProducts: builder.query({
-      query: (type) => `http://localhost:7000/api/product/offer?type=${type}`,
+      query: (type) => `https://shizzb-backend.onrender.com/api/product/offer?type=${type}`,
       providesTags:['OfferProducts']
     }),
     getPopularProductByType: builder.query({
-      query: (type) => `http://localhost:7000/api/product/popular/${type}`,
+      query: (type) => `https://shizzb-backend.onrender.com/api/product/popular/${type}`,
       providesTags:['PopularProducts']
     }),
     getTopRatedProducts: builder.query({
-      query: () => `http://localhost:7000/api/product/top-rated`,
+      query: () => `https://shizzb-backend.onrender.com/api/product/top-rated`,
       providesTags:['TopRatedProducts']
     }),
     // get single product
@@ -39,7 +39,7 @@ export const productApi = apiSlice.injectEndpoints({
 }),
     // get related products
     getRelatedProducts: builder.query({
-      query: (id) => `http://localhost:7000/api/product/related-product/${id}`,
+      query: (id) => `https://shizzb-backend.onrender.com/api/product/related-product/${id}`,
       providesTags: (result, error, arg) => [
         { type: "RelatedProducts", id: arg },
       ],
