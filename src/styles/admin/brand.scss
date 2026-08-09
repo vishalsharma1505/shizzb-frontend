@@ -1,0 +1,202 @@
+.brand-page {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.brand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.brand-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.brand-add-btn {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.brand-add-btn:hover {
+  background: #6d28d9;
+}
+
+.brand-search {
+  width: 320px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.brand-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.brand-table thead {
+  background: #f8f8f8;
+}
+
+.brand-table th,
+.brand-table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.brand-table img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.brand-status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.brand-status.active {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.brand-status.inactive {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.brand-action {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.brand-pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.brand-pagination button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.brand-pagination .active {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.brand-form {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.brand-form textarea{
+
+    resize:none;
+
+}
+
+.brand-form .form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.brand-form label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.brand-form input,
+.brand-form textarea,
+.brand-form select{
+
+    width:100%;
+    padding:12px;
+
+    border:1px solid #ddd;
+    border-radius:8px;
+
+    background:#fff;
+    color:#000;
+
+    font-size:15px;
+    outline:none;
+
+}
+
+.brand-form input::placeholder,
+.brand-form textarea::placeholder{
+
+    color:#999;
+
+}
+
+.brand-form textarea{
+
+    min-height:120px;
+
+}
+
+.brand-form select{
+
+    cursor:pointer;
+
+}
+
+.brand-form button{
+
+    margin-top:10px;
+
+    width:200px;
+
+}

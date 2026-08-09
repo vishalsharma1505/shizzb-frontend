@@ -1,0 +1,142 @@
+.review-page {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.review-header h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.review-search {
+  width: 320px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.review-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.review-table thead {
+  background: #f8f8f8;
+}
+
+.review-table th,
+.review-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.review-table th {
+  font-weight: 700;
+}
+
+.review-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-product img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.review-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-user strong {
+  font-size: 15px;
+}
+
+.review-user small {
+  color: #777;
+  margin-top: 4px;
+}
+
+.review-rating {
+  display: flex;
+  gap: 3px;
+}
+
+.review-comment {
+  max-width: 350px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.review-pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.review-pagination button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: .3s;
+}
+
+.review-pagination button:hover {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.review-pagination .active {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+@media(max-width:991px){
+
+  .review-search{
+    width:100%;
+  }
+
+  .review-table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+}

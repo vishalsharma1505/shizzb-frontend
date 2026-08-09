@@ -1,0 +1,248 @@
+/* ===================================
+CATEGORY FORM
+=================================== */
+
+.category-form{
+
+    width:100%;
+
+}
+
+.category-form-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-top:25px;
+
+}
+
+.category-form-card{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.05);
+
+}
+
+.category-form-card h4{
+
+    margin-bottom:12px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.category-form-card hr{
+
+    margin-bottom:20px;
+
+    border:none;
+
+    border-top:1px solid #eee;
+
+}
+
+
+/* ===================================
+LABEL
+=================================== */
+
+.category-form-card label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    margin-top:18px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#555;
+
+}
+
+
+/* ===================================
+INPUT
+=================================== */
+
+.category-form-card input[type=text],
+.category-form-card input[type=number],
+.category-form-card textarea{
+
+    width:100%;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    padding:12px 14px;
+
+    font-size:15px;
+
+    transition:.25s;
+
+    background:#fff;
+
+}
+
+.category-form-card textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+.category-form-card input:focus,
+.category-form-card textarea:focus{
+
+    border-color:#2563eb;
+
+}
+
+
+/* ===================================
+CHECKBOX
+=================================== */
+
+.category-checkbox{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.category-checkbox input{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.category-checkbox span{
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+
+/* ===================================
+IMAGE PREVIEW
+=================================== */
+
+.category-preview{
+
+    margin-top:30px;
+
+}
+
+.category-preview h5{
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.category-preview img{
+
+    width:100%;
+
+    height:220px;
+
+    border-radius:10px;
+
+    border:1px solid #eee;
+
+    object-fit:cover;
+
+    background:#fafafa;
+
+}
+
+
+/* ===================================
+SAVE BUTTON
+=================================== */
+
+.category-submit{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.category-submit .save-btn{
+
+    min-width:180px;
+
+}
+
+
+/* ===================================
+RESPONSIVE
+=================================== */
+
+@media(max-width:992px){
+
+.category-form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.category-form-card{
+
+padding:18px;
+
+}
+
+.category-preview img{
+
+height:180px;
+
+}
+
+.category-submit{
+
+justify-content:stretch;
+
+}
+
+.category-submit .save-btn{
+
+width:100%;
+
+}
+
+}
