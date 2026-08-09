@@ -245,7 +245,7 @@ if (data.payment === "Razorpay") {
 
         const options = {
 
-            key: "rzp_test_TFdiHx3WHYCWE2",
+            key: "rzp_live_TNh42H7kurGyNL",
 
             amount: res.order.amount,
 
