@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useSelector } from "react-redux";
 // internal
 import { CloseTwo } from '@/svg';
 import logo from '@assets/img/logo/logo.png';
@@ -13,6 +14,8 @@ const OffCanvas = ({ isOffCanvasOpen, setIsCanvasOpen,categoryType = "electronic
   const [isCategoryActive, setIsCategoryActive] = useState(false);
   const [isCurrencyActive, setIsCurrencyActive] = useState(false);
   const [isLanguageActive, setIsLanguageActive] = useState(false);
+
+  const { user } = useSelector((state) => state.auth);
 
   // handle language active
   const handleLanguageActive = () => {
@@ -42,14 +45,14 @@ const OffCanvas = ({ isOffCanvasOpen, setIsCanvasOpen,categoryType = "electronic
               </div>
             </div>
             <div className="offcanvas__category pb-40">
-              <button onClick={() => setIsCategoryActive(!isCategoryActive)} className="tp-offcanvas-category-toggle">
+              {/* <button onClick={() => setIsCategoryActive(!isCategoryActive)} className="tp-offcanvas-category-toggle">
                 <i className="fa-solid fa-bars"></i>
                 All Categories
-              </button>
+              </button> */}
               <div className="tp-category-mobile-menu">
-                <nav className={`tp-category-menu-content ${isCategoryActive ? "active" : ""}`}>
+                {/* <nav className={`tp-category-menu-content ${isCategoryActive ? "active" : ""}`}>
                   <MobileCategory categoryType={categoryType} isCategoryActive={isCategoryActive} />
-                </nav>
+                </nav> */}
               </div>
             </div>
             <div className="tp-main-menu-mobile fix d-lg-none mb-40">
@@ -69,8 +72,16 @@ const OffCanvas = ({ isOffCanvasOpen, setIsCanvasOpen,categoryType = "electronic
               </div>
             </div>
             <div className="offcanvas__btn">
-              <Link href="/contact" className="tp-btn-2 tp-btn-border-2">Contact Us</Link>
-            </div>
+  {user ? (
+    <Link href="/profile" className="tp-btn-2 tp-btn-border-2">
+      Profile
+    </Link>
+  ) : (
+    <Link href="/login" className="tp-btn-2 tp-btn-border-2">
+      Login
+    </Link>
+  )}
+</div>
           </div>
           <div className="offcanvas__bottom">
             <div className="offcanvas__footer d-flex align-items-center justify-content-between">
@@ -80,22 +91,7 @@ const OffCanvas = ({ isOffCanvasOpen, setIsCanvasOpen,categoryType = "electronic
                   <li>INR</li>
                 </ul>
               </div>
-              <div className="offcanvas__select language">
-                <div className="offcanvas__lang d-flex align-items-center justify-content-md-end">
-                  <div className="offcanvas__lang-img mr-15">
-                    <Image src={language_img} alt="language-flag" />
-                  </div>
-                  <div className="offcanvas__lang-wrapper">
-                    <span onClick={handleLanguageActive} className="offcanvas__lang-selected-lang tp-lang-toggle" id="tp-offcanvas-lang-toggle">English</span>
-                    <ul className={`offcanvas__lang-list tp-lang-list ${isLanguageActive ? 'tp-lang-list-open' : ''}`}>
-                      <li>Spanish</li>
-                      <li>Portugese</li>
-                      <li>American</li>
-                      <li>Canada</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

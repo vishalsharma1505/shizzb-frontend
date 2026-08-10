@@ -31,12 +31,12 @@ const AboutPage = () => {
 
           <div style={styles.right}>
             <Image
-              src="/assets/img/about/about1.jpg"
-              alt="About ShizzB"
-              width={612}
-              height={358}
-              style={styles.image}
-            />
+  src="/assets/img/about/about1.jpg"
+  alt="About ShizzB"
+  width={612}
+  height={358}
+  style={styles.image}
+/>
           </div>
         </section>
 
@@ -262,9 +262,11 @@ const styles = {
   },
 
   image: {
-    borderRadius: "15px",
-    animation: "float 4s ease-in-out infinite",
-  },
+  borderRadius: "15px",
+  animation: "float 4s ease-in-out infinite",
+  maxWidth: "100%",
+  height: "auto",
+},
 
   founderSection: {
     textAlign: "center",

@@ -78,8 +78,8 @@ const FAQPage = () => {
           <Image
             src="/assets/img/faq/faq.png"
             alt="FAQ"
-            width={559}
-            height={447}
+            width={359}
+            height={347}
             style={styles.image}
           />
         </div>
